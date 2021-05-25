@@ -1,8 +1,10 @@
 def conv(tipo,valor):
-    monto=float(input('Porfavor ingresa el monto: '))
-    cantidad= round(monto / valor,2)
-    print('La cantidad de pesos '+tipo+' convertidos a dolares es: '+ str(cantidad))
-
+    try:
+        monto=float(input('Porfavor ingresa el monto: '))
+        cantidad= round(monto / valor,2)
+        print('La cantidad de pesos '+tipo+' convertidos a dolares es: '+ str(cantidad))
+    except ValueError:
+        print('Debes ingresar un valor numerico')
 def run():
     menu = """
     Bienvenido al conversor de monedas...
